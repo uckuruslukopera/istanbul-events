@@ -1,0 +1,29 @@
+.c-event-create {
+    padding: 30px 80px;
+    &__header {
+        display: block;
+    }
+    &__content {
+        
+    }
+    &__actions {
+        button {
+            border: none;
+            padding: 5px 10px;
+            color: ivory;
+            margin-right: 5px;
+            cursor: pointer;
+            &:hover, 
+            &:active {
+                border: 1px solid black;
+            }
+        }
+        &-save {
+            background-color: getColor(warning-orange);
+
+        }
+        &-cancel {
+            background-color: getColor(dark-grey);
+        }
+    }
+}

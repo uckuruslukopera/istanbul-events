@@ -1,12 +1,15 @@
 .c-event-item {
     width: 270px;
+    padding: 10px;
+    background-color: getColor(ivory);
     &__image {
         position: relative;
         width: 100%;
+        height: 150px;
         img {
             vertical-align: middle;
             width: 100%;
-            height: auto;
+            height: 100%;
         }
         & .event-badge {
             position: absolute;
@@ -14,7 +17,7 @@
             right: 0px;
             padding: 4px 10px;
             white-space: nowrap;
-            background-color: getColor(cta-purple);
+            background-color: getColor(warning-orange);
             color: getColor(white);
             @include font-family(medium, 14px);
             text-align: center;

@@ -6,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class ImagePipe implements PipeTransform {
 
   transform(value: any, args?: any): any {
-    let size = args || '760/430';
-    return `http://via.placeholder.com/${size}`;
+    if (!value) return 'https://cdn.pixabay.com/photo/2017/11/24/10/43/admission-2974645_960_720.jpg';
+    return value;
   }
 
 }

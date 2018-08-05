@@ -1,16 +1,14 @@
-import { Component, OnInit, Input, HostBinding } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
-import { EventItem } from '../../../../shared/interfaces/event-item';
+import { IEvent } from '../../../../shared/interfaces/event.model';
 
 @Component({
   selector: 'app-event-item',
   templateUrl: './event-item.component.html'
 })
 export class EventItemComponent implements OnInit {
-
-  @HostBinding('class.c-event-item') true;
   
-  @Input() event: EventItem;
+  @Input() event: IEvent;
 
   constructor() { }
 

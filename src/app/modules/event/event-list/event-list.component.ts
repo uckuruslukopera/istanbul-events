@@ -1,15 +1,14 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { EventItem } from '../../../shared/interfaces/event-item';
 import { EventService } from '../../../shared/services/event.service';
+import { IEvent } from '../../../shared/interfaces/event.model';
 
 @Component({
   selector: 'app-event-list',
   templateUrl: './event-list.component.html'
 })
 export class EventListComponent implements OnInit {
-  @HostBinding('class.c-event-list') true;
-  events: EventItem[];
+  events: IEvent[];
 
   constructor(
     private eventService: EventService,

@@ -1,8 +1,8 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
-import { EventItem } from '../../../shared/interfaces/event-item';
 import { EventService } from '../../../shared/services/event.service';
+import { IEvent } from '../../../shared/interfaces/event.model';
 
 
 @Component({
@@ -10,9 +10,8 @@ import { EventService } from '../../../shared/services/event.service';
   templateUrl: './event-detail.component.html'
 })
 export class EventDetailComponent implements OnInit {
-  @HostBinding('class.c-event-detail') true;
   id: number;
-  event: EventItem;
+  event: IEvent;
 
   constructor(
     private eventService: EventService,

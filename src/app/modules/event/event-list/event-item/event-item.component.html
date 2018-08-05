@@ -1,15 +1,17 @@
-<div class="c-event-item__image">
-    <a [routerLink]="['/event/' + event?.id]">
-        <img src="{{ event?.imageUrl | image:'270x152' }}" alt="{{ event?.title }}">
-    </a>
-    <div [ngSwitch]="event?.time">
-        <span *ngSwitchCase="'08:00'" class="event-badge">Early Start</span>
-        <span *ngSwitchCase="'15:00'" class="event-badge">Late Start</span>
-        <span *ngSwitchDefault class="event-badge">Normal Start</span>
-    </div>
-</div>
-<div class="c-event-item__content">
-    <span class="c-event-item__content-title">{{ event?.title }}</span>
-    <span class="c-event-item__content-date">{{ event?.date }}</span>
-    <span class="c-event-item__content-location">{{ event?.location }}</span>
+<div class="c-event-item">
+    <div class="c-event-item__image">
+            <a [routerLink]="['/event/' + event?.id]">
+                <img src="{{ event?.imageUrl | image }}" alt="{{ event?.title }}">
+            </a>
+            <div [ngSwitch]="event?.time">
+                <span *ngSwitchCase="'08:00'" class="event-badge">Early Start</span>
+                <span *ngSwitchCase="'15:00'" class="event-badge">Late Start</span>
+                <span *ngSwitchDefault class="event-badge">Normal Start</span>
+            </div>
+        </div>
+        <div class="c-event-item__content">
+            <span class="c-event-item__content-title">{{ event?.name }}</span>
+            <span class="c-event-item__content-date">{{ event?.date | date:'MMMM d, EEEE ' }}</span>
+            <span class="c-event-item__content-location">{{ event?.location?.city }}</span>
+        </div>
 </div>

@@ -1,5 +1,11 @@
-<div class="c-event-list__content-wrapper">
-    <div *ngFor="let event of events" class="c-event-list__content-item">
-        <app-event-item [event]="event"></app-event-item>
+<div class="c-event-list">
+    <div class="c-event-list__header">
+        <h1>All Events</h1>
+        <hr>
+    </div>
+    <div class="c-event-list__content-wrapper">
+        <div *ngFor="let event of events" class="c-event-list__content-item">
+            <app-event-item [event]="event"></app-event-item>
+        </div>
     </div>
 </div>
