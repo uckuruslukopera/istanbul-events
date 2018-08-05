@@ -1,0 +1,17 @@
+.c-event-list {
+    display: block;
+    padding: 60px;
+    &__content-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        padding-bottom: 156px;
+    }
+    &__content-item {
+        background-color: getColor(ivory);
+        margin: 0 40px 60px 0;
+        padding: 10px;
+    }
+}

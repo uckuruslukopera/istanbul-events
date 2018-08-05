@@ -1,0 +1,47 @@
+@mixin font-family($name, $size:null, $style:normal, $important:!important) {
+
+    @if($name == "hairline"){
+        @if($style == "italic"){
+            font-family: "LatoHairlineItalic";
+        }@else{
+            font-family: "LatoHairline";
+        }
+    }
+
+    @if($name == "light"){
+        @if($style == "italic"){
+            font-family: "LatoLightItalic";
+        }@else{
+            font-family: "LatoLight";
+        }
+    }
+
+    @if($name == "regular"){
+        @if($style == "italic"){
+            font-family: "LatoItalic";
+        }@else{
+            font-family: "LatoRegular";
+        }
+    }
+
+
+    @if($name == "black"){
+        @if($style == "italic"){
+            font-family: "LatoBlackItalic";
+        }@else{
+            font-family: "LatoBlack";
+        }
+    }
+
+    @if($name == "bold"){
+        @if($style == "italic"){
+            font-family: "LatoBoldItalic";
+        }@else{
+            font-family: "LatoBold";
+        }
+    }
+
+    @if($size) {
+        font-size: $size $important;
+    }
+}

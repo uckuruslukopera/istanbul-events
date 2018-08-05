@@ -1,0 +1,25 @@
+
+    <div class="c-event-detail__content">
+        <div class="c-event-detail__content-wrapper">
+          <div class="c-event-detail__event-info">
+            <img class="c-event-detail__event-info-image" [src]="event?.imageUrl | image:'470x266'" />
+            <div class="c-event-detail__event-info-title">{{ event?.title }}</div>
+            <div class="c-event-detail__event-info-date">{{ event?.date }}</div>
+            <span class="c-event-detail__event-info-location">{{ event?.location }}</span>
+          </div>
+          <div class="c-event-detail__right">
+            <!-- <app-button *ngIf="!isMultiplePerformance" (click)="goToBasket()" rightIcon="arrow-right" [label]="'EVENT_DETAIL.BUY_TICKET' | translate"
+              size="full-width" theme="primary"></app-button>
+            <div class="c-event-detail__right-ticket-option">
+              <div *ngIf="products.length > 0" class="c-event-detail__right-ticket-option-title">{{ "EVENT_DETAIL.TICKET_OPTIONS" | translate }}</div>
+              <ul class="c-event-detail__right-ticket-option-list">
+                <li *ngFor="let product of products">
+                  <app-event-ticket-card [product]="product"></app-event-ticket-card>
+                </li>
+              </ul>
+            </div> -->
+          </div>
+        </div>
+      
+    </div>
+  
