@@ -21,16 +21,11 @@
 </div>
 <div class="c-header__right">
   <ul class="c-header__right-list">
-      <li routerLink="/user/profile" routerLinkActive="c-header__right-list-item--active" class="c-header__right-list-item">
-          <a><img src="assets/images/user.png" alt="user"></a>
-      </li>
-      <!-- <li class="c-header__right-list-item c-header__right-list-item--ticket">
-          <a href="#">
-              <img src="assets/images/icon/ticket-nav.svg" alt="ticket">
-          </a>
-      </li>
-      <li class="c-header__right-list-item">
-          <a href="javascript:void(0)" (click)="toggleLang($event)">{{otherLocaleLabel}}</a>
-      </li> -->
+    <li *ngIf="!authService.isAuthenticated()" routerLink="/user/login" routerLinkActive="c-header__right-list-item--active" class="c-header__right-list-item">
+        <a>Login</a>
+    </li>
+    <li *ngIf="authService.isAuthenticated()" routerLink="/user/profile" routerLinkActive="c-header__right-list-item--active" class="c-header__right-list-item">
+        <a><img src="assets/images/user.png" alt="user"></a> <span>{{ authService.currentUser?.userName }}</span>
+    </li>
   </ul>
 </div>

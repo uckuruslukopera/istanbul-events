@@ -1,12 +1,25 @@
 <div class="c-user-profile">
     <div class="c-user-profile__header">
-      <h1>User Profile</h1>
-      <hr>
+        <h1>User Profile</h1>
+        <hr>
     </div>
     <div class="c-user-profile__content">
-        <div class="c-event-create__actions">
-            <button type="button" class="c-event-create__actions-save" (click)="onSave($event)">Save</button>
-            <button type="button" class="c-event-create__actions-cancel" (click)="onCancel($event)">Cancel</button>
-      </div>
+        <form [formGroup]="profileForm" (ngSubmit)="saveProfile(profileForm.value)" autocomplete="off" novalidate>
+            <div class="o-form-group" [ngClass]="{'o-form-group--error': !validateFirstName()}">
+                <label for="firstName">First Name:</label>
+                <em *ngIf="!validateFirstName() && profileForm.controls?.firstName?.errors?.required">Required</em>
+                <em *ngIf="!validateFirstName() && profileForm.controls?.firstName?.errors?.pattern">Must start with letter</em>
+                <input required id="firstName" type="text" formControlName="firstName">
+            </div>
+            <div class="o-form-group" [ngClass]="{'o-form-group--error': !validateLastName()}">
+                <label for="lastName">Last Name:</label>
+                <em *ngIf="!validateLastName()">Required</em>
+                <input required id="lastName" type="text" formControlName="lastName">
+            </div>
+            <div class="o-form-actions">
+                <button type="submit" class="o-form-actions--save">Save</button>
+                <button type="button" class="o-form-actions--cancel" (click)="onCancel($event)">Cancel</button>
+            </div>
+        </form>
     </div>
 </div>

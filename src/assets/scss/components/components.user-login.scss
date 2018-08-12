@@ -1,11 +1,10 @@
-.c-user-profile {
+.c-login {
+    display: block;
     padding: 30px 80px;
     &__header {
         display: block;
     }
     &__content {
-        width: 100%;
-        display: flex;
-        margin-top: 20px;
+
     }
 }

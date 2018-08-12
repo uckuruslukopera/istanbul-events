@@ -43,6 +43,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+input {
+	border: 1px solid getColor(acid-green);
+	@include font-family(regular, 14px);
+}
 * {
 	box-sizing: border-box;
 

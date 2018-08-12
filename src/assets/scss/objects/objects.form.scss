@@ -1,0 +1,33 @@
+.o-form-group {
+    label {
+        @include font-family(regular, 16px);
+    }
+    input {
+        display: block;
+        padding: 10px 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    em {
+        display: inline-block;
+        color: red;
+        @include font-family(regular, 12px);
+        padding-left: 10px;
+    }
+    &--error {
+        input {
+            background-color: red;
+        }
+    }
+}
+
+
+
+.o-form-actions {
+    &--save {
+        background-color: getColor(warning-orange);
+    }
+    &--cancel {
+        background-color: getColor(dark-grey);
+    }
+}
