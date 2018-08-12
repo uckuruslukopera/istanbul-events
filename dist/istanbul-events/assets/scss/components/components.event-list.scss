@@ -1,0 +1,21 @@
+.c-event-list {
+    display: block;
+    padding: 30px 80px;
+    &__header {
+        display: block;
+    }
+    &__content-wrapper {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        padding-bottom: 156px;
+    }
+    &__content-item {
+        
+        margin: 0 20px 60px 0;
+        
+    }
+}

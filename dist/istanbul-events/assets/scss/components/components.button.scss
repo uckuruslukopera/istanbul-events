@@ -1,0 +1,81 @@
+.c-button {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    font-size: 24px;
+
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: inherit;
+        line-height: 0px;
+        border: 0px;
+        padding: 27px;
+        text-align: center;
+        outline: none;
+        min-width: 2.5em;
+        min-height: 2.5em;
+        vertical-align: middle;
+        pointer-events: none;
+    }
+    
+    &__label {
+        color: getColor(white);
+        @include font-family(bold, 24px);
+        text-decoration: none;
+        vertical-align: middle;
+        font-size: inherit;
+        line-height: 1.125em;
+    }
+
+    // &--disabled {
+    //     cursor: not-allowed;
+    //     opacity: 0.65;
+    //     >* {
+    //         pointer-events: none;
+    //     }
+    // }
+    &--no-label {
+        button {
+            padding-right: 0px !important;
+            padding-left: 0px !important;
+        }
+    }
+    &--primary {
+        button {
+            background-color: getColor(warning-orange);
+        }
+    }
+    &--secondary {
+        button {
+            background-color: getColor(dark-gray);
+        }
+    }
+    &--md {
+        button {
+            padding: 0.75em 1.66em;
+        }
+    }
+    &--lg {
+        button {
+            padding: 30px 40px;
+        }
+    }
+    &--sm {
+        button {
+            padding: 17px 40px;
+        }
+    }
+    &--xl {
+        button {
+            padding: 36px 40px;
+        }
+    }
+    &--full-width {
+        width: 100%;
+        button {
+            width: 100%;
+        }
+    }
+}
